@@ -4,7 +4,7 @@ API_KEY = '97a49da6cbdf561dfb4c10e0b1387ac3';
 async function getCurrentWeather(lat, lon) {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`,
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`,
         { mode: "cors" }
       );
       const weatherData = await response.json();
